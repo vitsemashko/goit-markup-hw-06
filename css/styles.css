@@ -35,7 +35,8 @@ h4,
 h5,
 h6,
 p,
-ul {
+ul,
+input {
 	margin: 0;
 	padding: 0;
 	border: 0;
@@ -287,8 +288,8 @@ header {
 	left: 50%;
 	transform: translate(-50%, -50%) scale(1);
 	transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
-	min-width: 528px;
-	min-height: 581px;
+	width: 528px;
+	height: 581px;
 	padding: 40px;
 
 	background-color: var(--bcg-color-one);
@@ -344,14 +345,12 @@ header {
 .modal-text {
 	font-weight: 700;
 	font-size: 20px;
-	line-height: 1.15px;
+	line-height: 1.15;
 	text-align: center;
 	letter-spacing: 0.03em;
 
 	color: var(--primary-color);
 	display: inline-block;
-	height: 23px;
-	width: 448px;
 
 	margin-bottom: 12px;
 }
@@ -359,11 +358,11 @@ header {
 	background-color: var(--accent-color);
 }
 .form-label {
-	display: inline-block;
+	display: block;
 
 	font-weight: 400;
 	font-size: 12px;
-	line-height: 1.17px;
+	line-height: 1.17;
 	letter-spacing: 0.01em;
 
 	color: var(--secondary-color);
@@ -372,9 +371,16 @@ header {
 	position: relative;
 	width: 100%;
 	display: flex;
+	margin-top: 5px;
+}
+.form-item {
+	margin-bottom: 10px;
+}
+.form-item--comment {
+	margin-bottom: 20px;
 }
 .form-icon {
-	margin-left: 5px;
+	margin-left: 12px;
 	position: absolute;
 	left: 0;
 	top: 50%;
@@ -385,9 +391,8 @@ header {
 	height: 40px;
 	width: 448px;
 	width: 100%;
-	margin-top: 5px;
-	margin-bottom: 10px;
-	padding-left: 24px;
+	outline: none;
+	padding-left: 42px;
 	border: 1px solid rgba(33, 33, 33, 0.2);
 	border-radius: 4px;
 	font-weight: 400;
@@ -398,6 +403,8 @@ header {
 		fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .comment-input {
+	margin-top: 4px;
+	display: block;
 	height: 120px;
 	resize: none;
 	padding: 12px 16px;
@@ -405,12 +412,10 @@ header {
 .agree-text {
 	font-weight: 400;
 	font-size: 14px;
-	line-height: 1.71px;
+	line-height: 1.71;
 	letter-spacing: 0.03em;
 	color: var(--secondary-color);
 	display: inline-block;
-	margin-bottom: 40px;
-	margin-top: 40px;
 	padding-left: 10px;
 }
 .checkbox-link {
@@ -429,7 +434,7 @@ header {
 .cust-check {
 	width: 1em;
 	height: 1em;
-	border: 1px solid var(--secondary-color);
+	border: 1px solid var(--primary-color);
 	border-radius: 1px;
 	fill: var(--bcg-color-one);
 	background-color: var(--bcg-color-one);
@@ -444,10 +449,10 @@ header {
 	background-color: var(--accent-color);
 }
 .form-button {
-	margin: 10px 163px 40px 163px;
+	margin: 30px auto 0;
+	display: block;
 	background-color: var(--accent-color);
 	transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-	display: inline-block;
 	height: 50px;
 	width: 200px;
 	border-radius: 4px;
@@ -709,11 +714,11 @@ address a:focus {
 	margin-bottom: 20px;
 }
 .mail-input {
-	width: 200px;
+	width: 358px;
 	height: 50px;
-
+	margin-right: 16px;
 	border: 1px solid rgba(255, 255, 255, 0.3);
-	filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 	border-radius: 4px;
 	color: rgba(255, 255, 255, 0.6);
 	background-color: #2f303a;
@@ -748,25 +753,6 @@ address a:focus {
 .subs-btn:focus {
 	background-color: var(--btn-secondary-accent-color);
 }
-#user-mail::placeholder {
-	font-weight: 400;
-	font-size: 16px;
-	line-height: 1.25;
-
-	display: flex;
-	align-items: center;
-	letter-spacing: 0.03em;
-
-	color: rgba(255, 255, 255, 0.6);
-}
-/* .mail-input:active + .label-mail {
-	visibility: hidden;
-	transition: visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-.mail-input:hover + .label-mail {
-	visibility: hidden;
-	transition: visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
-} */
 .mail-form {
 	display: flex;
 }
