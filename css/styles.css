@@ -301,8 +301,8 @@ header {
 	position: absolute;
 	height: 30px;
 	width: 30px;
-	top: 0;
-	right: 0;
+	top: 8px;
+	right: 8px;
 	border-radius: 50%;
 	background-color: var(--bcg-color-one);
 	border: 1px solid rgba(0, 0, 0, 0.1);
@@ -371,10 +371,13 @@ header {
 	position: relative;
 	width: 100%;
 	display: flex;
-	margin-top: 5px;
+	margin-top: 4px;
 }
 .form-item {
 	margin-bottom: 10px;
+}
+.form-item:nth-child(5) {
+	margin: 0;
 }
 .form-item--comment {
 	margin-bottom: 20px;
